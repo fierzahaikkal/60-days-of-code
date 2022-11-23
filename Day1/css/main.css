@@ -133,6 +133,8 @@ ul {
 
 .feedback_section {
   background: white;
+  padding-top: 3em;
+  padding-bottom: 0.3em;
 }
 .feedback_section li {
   background: white;
@@ -192,7 +194,7 @@ iframe {
   height: 300px;
 }
 
-nav.mobile-btn {
+nav.mobile-menu1 {
   display: block;
 }
 
