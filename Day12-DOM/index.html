@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form_register">
+      <input type="text" id="username" placeholder="username" required />
+      <input type="password" id="password" placeholder="password" required />
+      <input type="text" id="mail" placeholder="xyz@gmail.com" required />
+      <input
+        type="button"
+        id="submit-btn"
+        value="submit"
+        onclick="submitted()"
+      />
+    </form>
+
+    <script>
+      function Validation(username, password, mail) {
+        this.username = username;
+        this.password = password;
+        this.mail = mail;
+        const regex = /(?=.*[A-Z])(?=.*[0-9])/;
+        if (this.username === "" || this.mail === "") {
+          alert("Please Input username or email");
+          return false;
+        } else if (this.password.length < 8) {
+          alert("Password must have at least 8 character");
+          return false;
+        } else if (!this.password.match(regex)) {
+          alert("Password must contain A-Z and 0-9 ");
+          return false;
+        }
+      }
+
+      function submitted() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var mail = document.getElementById("mail").value;
+        document.getElementById("form_register").submit();
+        const user = new Validation(username, password, mail);
+        console.log(user);
+      }
+    </script>
+  </body>
+</html>
