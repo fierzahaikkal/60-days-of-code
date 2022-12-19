@@ -81,3 +81,29 @@ let person = new TimeTraveler("John", "Doe", 1995);
 console.log(
   person.firstName + " " + person.lastName + " is time travel to " + person.year
 );
+
+//================Using call, apply dan Bind===========================
+// call dan method mengizinkan kita untuk memanggil function dan meneruskan ke this
+// nilai unik method call mengambil argumen this sebagai instance
+// diikuti dengan beberapa parameter yang terpisah
+//pada apply argument terpisah disatukan didalam array
+
+//deklrasi umum call
+// func.call(this, arg1, arg2, arg3);
+
+//deklarasi umum apply
+// func.apply(this, [arg1, arg2, arg3]);
+
+doc.timeTravelFor = (instance, year) => {
+  this.timeTravel.call(instance, year);
+  //if we using apply
+  // timeTravelFor.apply(instance, [year]);
+};
+
+let person2 = {
+  firstName: "Person",
+  lastName: "2",
+};
+
+doc.timeTravelFor(person2, 1842);
+//Output: Person 2 is time traveling to 1985
