@@ -1,21 +1,23 @@
+import React from "react";
 import { Container, Button } from "react-bootstrap";
 
-const menuAction = () => {
+const content = () => {
   return (
     <Container>
       <Button
-        href="/create"
+        href="#"
         types="submit"
         className="d-inline float-end"
-        variant="secondary"
+        variant="success"
       >
-        + File
+        Simpan
       </Button>{" "}
       <br></br>
       <br></br>
       <hr></hr>
+      <h1>Simpan Elemen</h1>
     </Container>
   );
 };
 
-export default menuAction;
+export default content;

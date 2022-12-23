@@ -14,13 +14,19 @@ const contentCard = () => {
           arcu quis magna lobortis bibendum. Donec fermentum vehicula magna eu
           sollen
         </Card.Text>
-        <Card.Link href="#" className="float-end text-decoration-none">
+        <Card.Link href="/delete" className="float-end text-decoration-none">
           Delete
         </Card.Link>
-        <Card.Link href="#" className="float-end me-3 text-decoration-none">
+        <Card.Link
+          href="/content"
+          className="float-end me-3 text-decoration-none"
+        >
           View
         </Card.Link>
-        <Card.Link href="#" className="float-end me-3 text-decoration-none">
+        <Card.Link
+          href="/content"
+          className="float-end me-3 text-decoration-none"
+        >
           Edit
         </Card.Link>
       </Card.Body>

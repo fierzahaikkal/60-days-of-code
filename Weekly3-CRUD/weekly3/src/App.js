@@ -1,20 +1,20 @@
-import Menu from "./components/Menu";
+import HomePage from "./pages/HomePage";
 import NavigationBar from "./components/NavigationBar";
-import Content from "./components/Content";
+import ContentPage from "./pages/ContentPage";
+import CreatePage from "./pages/CreatePage";
 import "./styles/style.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      {/* Navbar */}
-      <div className="Nav-bar">
-        <NavigationBar />
-      </div>
-      {/* Menu CTA */}
-      <Menu />
-      {/* Card */}
-      <Content />
-    </div>
+    <BrowserRouter>
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="content" element={<ContentPage />}></Route>
+        <Route path="create" element={<CreatePage />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
