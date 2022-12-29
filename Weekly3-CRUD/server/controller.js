@@ -9,7 +9,7 @@ export const getPosts = async (req, res) => {
   }
 };
 
-export const getPostsById = async (req, res) => {
+export const getPostById = async (req, res) => {
   try {
     const response = await Posts.findOne({
       where: {
@@ -40,7 +40,7 @@ export const updatePosts = async (req, res) => {
   }
 };
 
-export const deletePosts = async (req, res) => {
+export const deletePost = async (req, res) => {
   try {
     await Posts.destroy({ where: { id: req.params.id } });
     res.status(201).json({ msg: "Posts deleted" });

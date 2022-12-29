@@ -11,7 +11,7 @@ function App() {
       <NavigationBar />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="content" element={<ContentPage />}></Route>
+        <Route path="content/:id" element={<ContentPage />}></Route>
         <Route path="create" element={<CreatePage />}></Route>
       </Routes>
     </BrowserRouter>
